@@ -255,6 +255,32 @@
         margin: 0; /* Setting margin to 0 hides the browser header and footer */
       }
     }
+    
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      .resume-container {
+        padding: 25px 20px;
+      }
+      .skills-container {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+      .skill-category {
+        text-align: left;
+        margin-top: 10px;
+      }
+      .contact-info {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+      }
+      .contact-info .separator {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
