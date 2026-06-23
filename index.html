@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajwal Rudrapwar - AI & Data Science</title>
+    <meta name="description" content="Portfolio of Prajwal Rudrapwar, an AI & Data Science graduate specializing in ML/DL, GenAI, and Computer Vision.">
+    
+    <!-- Fonts: Inter & JetBrains Mono for a tech vibe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="grid-bg"></div>
+    <div class="grain-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#top" class="logo">prajwal<span>.ai()</span></a>
+            <div class="nav-links">
+                <a href="#about" class="hover-target">About</a>
+                <a href="#experience" class="hover-target">Experience</a>
+                <a href="#projects" class="hover-target">Projects</a>
+                <a href="#skills" class="hover-target">Skills</a>
+                <a href="#contact" class="hover-target">Contact</a>
+            </div>
+            <a href="resume.html" target="_blank" class="btn primary-btn hover-target">Resume ↗</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="top" class="hero-section">
+        <div class="hero-content reveal">
+            <span class="eyebrow">Pune, Maharashtra · AI & Data Science Graduate</span>
+            <h1 class="hero-title">
+                <span class="line">Prajwal</span>
+                <span class="line">Rudrapwar<span class="accent-color">.</span></span>
+                <span class="line type-wrap">
+                    <span id="typewriter" class="accent-gradient"></span><span class="cursor">|</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle">
+                I build <strong>intelligent systems</strong> end-to-end — from data engineering and model prototyping to deploying scalable <strong>RAG pipelines and Generative AI</strong> applications.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn primary-btn hover-target">View Projects →</a>
+                <a href="#contact" class="btn ghost-btn hover-target">Contact Me</a>
+            </div>
+            <div class="hero-socials">
+                <span class="social-label">FIND ME //</span>
+                <a href="https://www.linkedin.com/in/prajwal-rudrapwar-7233b726a" target="_blank" rel="noopener noreferrer" class="hover-target">LinkedIn</a>
+                <a href="mailto:prudrapwar@gmail.com" class="hover-target">Email</a>
+            </div>
+        </div>
+        
+        <!-- Hero ML Schematic SVG -->
+        <div class="hero-schematic reveal delay-1">
+            <div class="schematic-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span>pipeline://inference_engine</span>
+            </div>
+            <svg viewBox="0 0 500 400" class="schematic-svg">
+                <!-- Data Nodes -->
+                <rect x="40" y="50" width="100" height="50" rx="8" class="svg-node" />
+                <text x="90" y="75" text-anchor="middle" class="svg-text">Raw Data</text>
+                
+                <rect x="200" y="50" width="100" height="50" rx="8" class="svg-node" />
+                <text x="250" y="75" text-anchor="middle" class="svg-text">ETL Pipeline</text>
+                
+                <rect x="360" y="50" width="100" height="50" rx="8" class="svg-node" />
+                <text x="410" y="75" text-anchor="middle" class="svg-text">Vector DB</text>
+                
+                <rect x="200" y="160" width="100" height="60" rx="8" class="svg-node" />
+                <text x="250" y="190" text-anchor="middle" class="svg-text">LLM Engine</text>
+                
+                <rect x="200" y="280" width="100" height="60" rx="8" class="svg-node" />
+                <text x="250" y="315" text-anchor="middle" class="svg-text">FastAPI / UI</text>
+
+                <!-- Flow Lines -->
+                <path d="M140 75 L200 75" class="svg-line" />
+                <path d="M300 75 L360 75" class="svg-line" />
+                <path d="M410 100 L410 190 L300 190" class="svg-line" />
+                <path d="M250 220 L250 280" class="svg-line" />
+
+                <!-- Moving Packets -->
+                <circle cx="0" cy="0" r="4" class="svg-packet">
+                    <animateMotion dur="2s" repeatCount="indefinite" path="M140 75 L200 75" />
+                </circle>
+                <circle cx="0" cy="0" r="4" class="svg-packet">
+                    <animateMotion dur="2.5s" repeatCount="indefinite" path="M300 75 L360 75" />
+                </circle>
+                <circle cx="0" cy="0" r="4" class="svg-packet accent-packet">
+                    <animateMotion dur="3s" repeatCount="indefinite" path="M410 100 L410 190 L300 190" />
+                </circle>
+                <circle cx="0" cy="0" r="4" class="svg-packet">
+                    <animateMotion dur="2s" repeatCount="indefinite" path="M250 220 L250 280" />
+                </circle>
+            </svg>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">01 — About</span>
+                <h2 class="section-title">Who I <span class="accent-gradient">am</span></h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p><strong>Innovative AI/ML Engineer</strong> with 2+ years of experience architecting high-performance, real-time AI solutions and multi-agent pipelines.</p>
+                    <p>Proven track record of translating complex product requirements into low-latency production applications, including StreamGuard (WebSocket-driven live stream co-pilots), RAG-based legal document analysis engines, and aspect-based NLP engines. Expert in optimizing LLM inference (Gemini 2.0/2.5, Transformers), vector databases (pgvector), and real-time streaming architectures (WebSockets, voice matching). Passionate about building intelligent, scalable systems that solve real-world latency and user engagement bottlenecks.</p>
+                </div>
+                
+                <div class="terminal-box reveal delay-1">
+                    <div class="terminal-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <span>$ whoami --verbose</span>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="term-row"><span class="term-key">role</span><span class="term-val">AI/ML Engineer</span></div>
+                        <div class="term-row"><span class="term-key">education</span><span class="term-val">B.Tech (AI & Data Science)</span></div>
+                        <div class="term-row"><span class="term-key">location</span><span class="term-val">Pune, Maharashtra</span></div>
+                        <div class="term-row"><span class="term-key">focus</span><span class="term-val">Transformers, GenAI, RAG</span></div>
+                        <div class="term-row"><span class="term-key">status</span><span class="term-val success">Ready for new challenges</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">02 — Experience</span>
+                <h2 class="section-title">Where I've <span class="accent-gradient">worked</span></h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-meta">July 2024 — Present</div>
+                    <h3 class="timeline-role">AI/ML Engineer</h3>
+                    <div class="timeline-company">Addvic Technology, Pune</div>
+                    <ul class="timeline-desc">
+                        <li>Architected and deployed an asynchronous AI-powered contract analysis engine using <strong>FastAPI</strong> and <strong>Supabase</strong> (<strong>PostgreSQL</strong>), reducing manual contract review times by 85%.</li>
+                        <li>Engineered a production-grade <strong>RAG</strong> pipeline utilizing <strong>Gemini text-embedding-004</strong> and <strong>Supabase pgvector</strong>, allowing users to perform semantic search with sub-second response times.</li>
+                        <li>Implemented an advanced smart chunking algorithm that dynamically splits PDFs and DOCX files by legal sections (using <strong>PyMuPDF</strong> and <strong>LangChain</strong>), improving retrieval context accuracy by 40%.</li>
+                        <li>Integrated <strong>Gemini LLM API</strong> to automate complex risk assessments, utilizing strict structured JSON output to extract party agreements and critical dates with 98% data extraction integrity.</li>
+                        <li>Developed a professional PDF reporting service from scratch using <strong>ReportLab</strong>, enabling immediate downloads of structured executive summaries and risk matrices.</li>
+                        <li>Secured critical REST endpoints by implementing OAuth2-compatible HTTPBearer token validation with <strong>Supabase Auth</strong>.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Analytics Pipelines</span>
+                        <span class="tag">Prescriptive Analytics</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-meta">Jan 2024 — June 2024</div>
+                    <h3 class="timeline-role">Machine Learning Intern</h3>
+                    <div class="timeline-company">Kiran Academy, Pune</div>
+                    <ul class="timeline-desc">
+                        <li>Engineered robust data pipelines for complex classification datasets, improving baseline <strong>Machine Learning</strong> model accuracy by 25%.</li>
+                        <li>Implemented <strong>Model Pruning</strong> and quantization strategies, reducing inference latency and memory footprint by over 40%.</li>
+                        <li>Evaluated multiple classification algorithms and automated hyperparameter tuning using <strong>Scikit-Learn</strong> and <strong>TensorFlow</strong>.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">AI</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-node"></div>
+                    <div class="timeline-meta">Nov 2023 — Jan 2024</div>
+                    <h3 class="timeline-role">Machine Learning Intern</h3>
+                    <div class="timeline-company">YBI Foundation, Pune</div>
+                    <ul class="timeline-desc">
+                        <li>Engineered statistical pipelines to eliminate outliers & enhance data visualization, reducing model complexity by 50%.</li>
+                        <li>Analyzed large datasets from multiple sources to identify patterns and trends in data.</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">Statistical Pipelines</span>
+                        <span class="tag">Data Visualization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">03 — Projects</span>
+                <h2 class="section-title">Things I've <span class="accent-gradient">built</span></h2>
+            </div>
+
+            <div class="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="flip-card reveal hover-target">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <span class="project-id">PROJ — 01</span>
+                            <h3 class="project-title">Contract Reviewer (RAG)</h3>
+                            <p class="project-summary">A RAG-powered document analysis tool for automated legal risk assessments using LLMs.</p>
+                            <div class="tags">
+                                <span class="tag">FastAPI</span>
+                                <span class="tag">Supabase</span>
+                                <span class="tag">Gemini API</span>
+                            </div>
+                            <span class="flip-hint">Hover to flip</span>
+                        </div>
+                        <div class="flip-back">
+                            <h4 class="back-title">// Under the hood</h4>
+                            <ul class="back-list">
+                                <li>Scalable backend handling secure storage and JWT auth.</li>
+                                <li>System prompts designed for Gemini 2.5-flash-lite.</li>
+                                <li>Dynamic PDF reporting engine using ReportLab.</li>
+                            </ul>
+                            <a href="https://github.com/yourusername/contract-reviewer" target="_blank" class="btn ghost-btn hover-target" style="margin-top: 1rem; font-size: 0.75rem; padding: 0.4rem 0.8rem;">View on GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="flip-card reveal delay-1 hover-target">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <span class="project-id">PROJ — 02</span>
+                            <h3 class="project-title">Sentiment-IQ</h3>
+                            <p class="project-summary">Real-time NLP inference pipeline classifying text sentiment and extracting emotional distributions.</p>
+                            <div class="tags">
+                                <span class="tag">HuggingFace</span>
+                                <span class="tag">DistilBERT</span>
+                                <span class="tag">spaCy</span>
+                            </div>
+                            <span class="flip-hint">Hover to flip</span>
+                        </div>
+                        <div class="flip-back">
+                            <h4 class="back-title">// Under the hood</h4>
+                            <ul class="back-list">
+                                <li>Inference pipeline using FastAPI with millisecond latency.</li>
+                                <li>Aspect-based sentiment analysis engine via spaCy to detect product features dynamically.</li>
+                            </ul>
+                            <a href="https://github.com/yourusername/sentiment-iq" target="_blank" class="btn ghost-btn hover-target" style="margin-top: 1rem; font-size: 0.75rem; padding: 0.4rem 0.8rem;">View on GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="flip-card reveal delay-2 hover-target">
+                    <div class="flip-inner">
+                        <div class="flip-front">
+                            <span class="project-id">PROJ — 03</span>
+                            <h3 class="project-title">GenAI Visualization</h3>
+                            <p class="project-summary">GAN-based models for audio-to-image generation exploring LLAMA frameworks.</p>
+                            <div class="tags">
+                                <span class="tag">GANs</span>
+                                <span class="tag">LLAMA</span>
+                                <span class="tag">GenAI</span>
+                            </div>
+                            <span class="flip-hint">Hover to flip</span>
+                        </div>
+                        <div class="flip-back">
+                            <h4 class="back-title">// Under the hood</h4>
+                            <ul class="back-list">
+                                <li>Advanced data processing and visual generation.</li>
+                                <li>Experimentation with cutting-edge open-weight models for multimedia synthesis.</li>
+                            </ul>
+                            <a href="https://github.com/yourusername/genai-visualization" target="_blank" class="btn ghost-btn hover-target" style="margin-top: 1rem; font-size: 0.75rem; padding: 0.4rem 0.8rem;">View on GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="eyebrow">04 — Skills</span>
+                <h2 class="section-title">What I <span class="accent-gradient">work</span> with</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <h4>[A] AI & ML Models</h4>
+                    <ul class="skill-list">
+                        <li>Transformer Models</li>
+                        <li>BERT / RoBERTa</li>
+                        <li>LSTM / RNN</li>
+                        <li>Generative AI (GANs, LLAMA)</li>
+                    </ul>
+                </div>
+                <div class="skill-category reveal delay-1">
+                    <h4>[B] Frameworks & Tools</h4>
+                    <ul class="skill-list">
+                        <li>HuggingFace</li>
+                        <li>LangChain</li>
+                        <li>OpenAI APIs</li>
+                        <li>TensorFlow / PyTorch</li>
+                        <li>Power BI</li>
+                    </ul>
+                </div>
+                <div class="skill-category reveal delay-2">
+                    <h4>[C] Languages & DBs</h4>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>SQL / MySQL</li>
+                        <li>JavaScript / HTML</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+                <div class="skill-category reveal delay-3">
+                    <h4>[D] Applied AI</h4>
+                    <ul class="skill-list">
+                        <li>Prompt Engineering</li>
+                        <li>Model Optimization</li>
+                        <li>API Integration</li>
+                        <li>RAG / Document AI</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-box reveal">
+                <span class="eyebrow">05 — Contact</span>
+                <h2 class="contact-title">Let's build intelligent<br><span class="accent-gradient">systems together.</span></h2>
+                <p class="contact-desc">Whether you have a question, an opportunity, or just want to discuss the latest in AI, my inbox is open.</p>
+                
+                <div class="contact-actions">
+                    <a href="mailto:prudrapwar@gmail.com" class="btn primary-btn hover-target">prudrapwar@gmail.com →</a>
+                    <a href="https://www.linkedin.com/in/prajwal-rudrapwar-7233b726a" target="_blank" rel="noopener noreferrer" class="btn ghost-btn hover-target">LinkedIn ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Prajwal Rudrapwar. Built with vanilla tech.</p>
+            <a href="#top" class="hover-target">back_to_top() ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

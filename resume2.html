@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prajwal Rudrapwar - Resume V2</title>
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --sidebar-bg: #1a1a2e; /* Deep dark blue */
+      --sidebar-text: #e2e8f0;
+      --sidebar-accent: #0ea5e9; /* Light blue accent */
+      
+      --main-bg: #ffffff;
+      --main-text: #334155;
+      --main-heading: #0f172a;
+      
+      --border-light: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f1f5f9;
+      color: var(--main-text);
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+
+    .resume-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--main-bg);
+      display: flex;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 1100px; /* Standard A4 proportion approx */
+    }
+
+    /* Sidebar Styles (Left Column) */
+    .sidebar {
+      width: 33%;
+      background-color: var(--sidebar-bg);
+      color: var(--sidebar-text);
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .sidebar h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--sidebar-accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 5px;
+    }
+
+    .header-name h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 5px;
+    }
+
+    .header-name h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--sidebar-accent);
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 13px;
+    }
+
+    .contact-list li {
+      margin-bottom: 10px;
+      word-break: break-all;
+    }
+    
+    .contact-list a {
+      color: var(--sidebar-text);
+      text-decoration: none;
+    }
+
+    .sidebar-block {
+      font-size: 13px;
+    }
+
+    .sidebar-block h4 {
+      font-size: 14px;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .sidebar-block p {
+      color: #94a3b8;
+      margin-bottom: 12px;
+    }
+
+    .skills-list {
+      list-style: none;
+    }
+
+    .skills-list li {
+      margin-bottom: 12px;
+    }
+
+    .skills-list span.title {
+      display: block;
+      color: #ffffff;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .skills-list span.items {
+      color: #94a3b8;
+      font-size: 12px;
+    }
+
+    .achievements-list {
+      padding-left: 15px;
+      color: #94a3b8;
+    }
+
+    .achievements-list li {
+      margin-bottom: 8px;
+    }
+
+    /* Main Content (Right Column) */
+    .main-content {
+      width: 67%;
+      padding: 40px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .main-content h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--main-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .main-content h2::after {
+      content: "";
+      flex-grow: 1;
+      height: 2px;
+      background-color: var(--sidebar-accent);
+      opacity: 0.2;
+    }
+
+    .summary p {
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .item-group {
+      margin-bottom: 20px;
+    }
+
+    .item-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 5px;
+    }
+
+    .item-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--main-heading);
+    }
+
+    .item-subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--sidebar-accent);
+    }
+
+    .item-date {
+      font-size: 13px;
+      font-weight: 500;
+      color: #64748b;
+      white-space: nowrap;
+    }
+
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 18px;
+      margin-top: 5px;
+    }
+
+    ul.bullet-list li {
+      font-size: 13.5px;
+      margin-bottom: 5px;
+      text-align: justify;
+    }
+
+    /* Print Optimization */
+    @media print {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+      .resume-wrapper {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        min-height: auto;
+      }
+      @page {
+        size: A4;
+        margin: 0; /* Hides browser headers */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-wrapper">
+    
+    <!-- LEFT COLUMN -->
+    <div class="sidebar">
+      
+      <div class="header-name">
+        <h1>Prajwal<br>Rudrapwar</h1>
+        <h3>AI & Data Science Engineer</h3>
+      </div>
+
+      <div class="sidebar-block">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li>📍 Pune, Maharashtra</li>
+          <li>📧 <a href="mailto:prudrapwar@gmail.com">prudrapwar@gmail.com</a></li>
+          <li>📞 8766976753</li>
+          <li>🔗 <a href="https://linkedin.com/in/prajwal-rudrapwar-7233b726a">My LinkedIn</a></li>
+          <li>💻 <a href="https://github.com/prajwalrudra">My GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <h2>Education</h2>
+        <h4>B.Tech (AI & Data Science)</h4>
+        <p>Vidya Pratishthan’s Kamalnayan Bajaj Institute of Engineering and Technology, Pune<br>2021 - 2024</p>
+      </div>
+
+      <div class="sidebar-block">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>
+            <span class="title">Core Backend Development</span>
+            <span class="items">Python, FastAPI, RESTful APIs, Real-time WebSockets, Asynchronous Task Queues, API Rate Limiting (slowapi), Web Scraping (BeautifulSoup, HTTPX)</span>
+          </li>
+          <li>
+            <span class="title">AI & Machine Learning</span>
+            <span class="items">Generative AI, Large Language Models (LLMs), Multi-Agent AI Pipelines, Retrieval-Augmented Generation (RAG), Vector Embeddings, Semantic Search Optimization</span>
+          </li>
+          <li>
+            <span class="title">Databases & Cloud</span>
+            <span class="items">Supabase, PostgreSQL, pgvector (Vector Store), Docker, Database Schema Design, Row-Level Security (RLS)</span>
+          </li>
+          <li>
+            <span class="title">NLP & Data Science Tools</span>
+            <span class="items">spaCy, Hugging Face Transformers (DistilBERT, RoBERTa), Tokenization, Voice Recognition & Matching, PyMuPDF, ReportLab (PDF Generation)</span>
+          </li>
+          <li>
+            <span class="title">Languages & Version Control</span>
+            <span class="items">Python, JavaScript (ES6+), SQL, Git/GitHub</span>
+          </li>
+          <li>
+            <span class="title">Familiar / Frontend Integration</span>
+            <span class="items">React, Next.js</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <h2>Achievements</h2>
+        <ul class="achievements-list">
+          <li>GATE (DA) Qualifier 2026</li>
+          <li>Training in Transformer Models & Generative AI</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="main-content">
+      
+      <div class="summary">
+        <h2>Profile Summary</h2>
+        <p>Innovative AI/ML Engineer with 2+ years of experience architecting high-performance, real-time AI solutions and multi-agent pipelines. Proven track record of translating complex product requirements into low-latency production applications, including StreamGuard (WebSocket-driven live stream co-pilots), RAG-based legal document analysis engines, and aspect-based NLP engines. Expert in optimizing LLM inference (Gemini 2.0/2.5, Transformers), vector databases (pgvector), and real-time streaming architectures (WebSockets, voice matching). Passionate about building intelligent, scalable systems that solve real-world latency and user engagement bottlenecks.</p>
+      </div>
+
+      <div class="experience">
+        <h2>Experience</h2>
+        
+        <div class="item-group">
+          <div class="item-header">
+            <div>
+              <div class="item-title">AI/ML Engineer</div>
+              <div class="item-subtitle">Addvic Technology, Pune</div>
+            </div>
+            <div class="item-date">July 2024 – Present</div>
+          </div>
+          <ul class="bullet-list">
+            <li>Architected and deployed an asynchronous AI-powered contract analysis engine using <strong>FastAPI</strong> and <strong>Supabase</strong> (<strong>PostgreSQL</strong>), reducing manual contract review times by 85%.</li>
+            <li>Engineered a production-grade <strong>RAG</strong> (Retrieval-Augmented Generation) pipeline utilizing <strong>Gemini text-embedding-004</strong> and <strong>Supabase pgvector</strong>, allowing users to perform semantic search and query long-form legal documents with sub-second response times.</li>
+            <li>Implemented an advanced smart chunking algorithm that dynamically splits PDFs and DOCX files by legal sections (using <strong>PyMuPDF</strong> and <strong>LangChain</strong>), improving retrieval context accuracy by 40% compared to standard character splitters.</li>
+            <li>Integrated <strong>Gemini LLM API</strong> to automate complex risk assessments, utilizing strict structured JSON output to extract party agreements, critical dates, and risk ratings (low/critical) with 98% data extraction integrity.</li>
+            <li>Developed a professional PDF reporting service from scratch using <strong>ReportLab</strong>, enabling immediate downloads of structured executive summaries, risk matrices, and actionable clause recommendations.</li>
+            <li>Secured critical REST endpoints by implementing OAuth2-compatible HTTPBearer token validation with <strong>Supabase Auth</strong>, preventing unauthorized access to sensitive legal documentation.</li>
+          </ul>
+        </div>
+
+        <div class="item-group">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Machine Learning Intern</div>
+              <div class="item-subtitle">Kiran Academy, Pune</div>
+            </div>
+            <div class="item-date">Jan 2024 – June 2024</div>
+          </div>
+          <ul class="bullet-list">
+            <li>Engineered robust data pipelines for complex classification datasets, applying advanced feature engineering to improve baseline <strong>Machine Learning</strong> model accuracy by 25%.</li>
+            <li>Implemented <strong>Model Pruning</strong> and quantization strategies on deep neural networks, reducing inference latency and memory footprint by over 40% without compromising predictive performance.</li>
+            <li>Evaluated multiple classification algorithms and automated hyperparameter tuning using <strong>Scikit-Learn</strong> and <strong>TensorFlow</strong>, establishing highly accurate models for production readiness.</li>
+          </ul>
+        </div>
+
+        <div class="item-group">
+          <div class="item-header">
+            <div>
+              <div class="item-title">Machine Learning Intern</div>
+              <div class="item-subtitle">YBI Foundation, Pune</div>
+            </div>
+            <div class="item-date">Nov 2023 – Jan 2024</div>
+          </div>
+          <ul class="bullet-list">
+            <li>Engineered statistical pipelines to eliminate outliers & enhance data visualization, reducing model complexity by 50%.</li>
+            <li>Analyzed large datasets from multiple sources to identify patterns and trends in data.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="projects">
+        <h2>Key Projects</h2>
+        
+        <div class="item-group">
+          <div class="item-title">1. Contract Reviewer - RAG powered Document Analysis Tool</div>
+          <ul class="bullet-list">
+            <li>Designed and built a scalable backend using FastAPI, Pydantic, and Supabase, handling secure document storage, JWT-based authentication, and complex relational data modeling.</li>
+            <li>Automated legal risk assessments by designing system prompts for Gemini 2.5-flash-lite to generate structured JSON responses, identifying critical risk flags, key dates, and party roles.</li>
+            <li>Built a dynamic PDF reporting engine using ReportLab to generate formatted executive summaries, complete with risk severity badges and tabular data extraction.</li>
+          </ul>
+        </div>
+
+        <div class="item-group">
+          <div class="item-title">2. Generative AI Visualization</div>
+          <ul class="bullet-list">
+            <li>Designed GAN-based models for audio-to-image generation, exploring LLAMA frameworks.</li>
+            <li>Demonstrated advanced data processing and visualization skills applicable to applied AI use cases.</li>
+          </ul>
+        </div>
+
+        <div class="item-group">
+          <div class="item-title">3. Sentiment-IQ - Machine Learning & NLP Integration</div>
+          <ul class="bullet-list">
+            <li>Engineered a real-time NLP inference pipeline using FastAPI and HuggingFace Transformers (DistilBERT/GoEmotions), classifying text sentiment and extracting granular emotional distributions with millisecond latency.</li>
+            <li>Built an aspect-based sentiment analysis engine using spaCy to dynamically detect product features from unstructured reviews, providing highly targeted business insights.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
